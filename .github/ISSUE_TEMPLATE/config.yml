@@ -1,0 +1,7 @@
+# Configura el selector de plantillas de issues.
+# false = obliga a usar una plantilla (no deja abrir un issue en blanco).
+blank_issues_enabled: false
+contact_links:
+  - name: Preguntas generales
+    url: https://github.com/luis171190/gh900-practica/discussions
+    about: Para dudas usa Discussions, no Issues

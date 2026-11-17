@@ -1,0 +1,21 @@
+# GitHub Actions: automatizacion que corre en servidores de GitHub.
+# Partes: workflow (este archivo) > jobs > steps.
+# "on" = el evento que lo dispara. "runs-on" = la maquina (runner).
+name: Hola Actions
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch: # permite correrlo a mano desde la pestana Actions
+
+jobs:
+  saludo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bajar el codigo del repo
+        uses: actions/checkout@v4 # una "action" reutilizable del Marketplace
+      - name: Listar archivos
+        run: ls -la
+      - name: Saludar
+        run: echo "Hola desde Actions, evento ${{ github.event_name }}"

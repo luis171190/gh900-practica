@@ -1,0 +1,24 @@
+# Issue form: plantilla con campos (en vez de texto libre).
+# Se guarda en .github/ISSUE_TEMPLATE/ y aparece al tocar "New issue".
+name: Reporte de error
+description: Contanos algo que no funciona
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: que-paso
+    attributes:
+      label: Que paso
+      description: Describi el error y como reproducirlo
+    validations:
+      required: true
+  - type: dropdown
+    id: gravedad
+    attributes:
+      label: Gravedad
+      options:
+        - Baja
+        - Media
+        - Alta
+    validations:
+      required: true

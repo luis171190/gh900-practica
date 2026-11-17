@@ -1,0 +1,8 @@
+# CODEOWNERS: quien es dueno de cada parte del repo.
+# Cuando un PR toca esos archivos, GitHub pide revision automaticamente a ese dueno.
+# Con la regla de proteccion "Require review from Code Owners" la revision pasa a ser obligatoria.
+# Formato: patron   @usuario-o-@org/equipo
+# La ULTIMA linea que coincide gana.
+
+*                    @luis171190
+/.github/workflows/  @luis171190
